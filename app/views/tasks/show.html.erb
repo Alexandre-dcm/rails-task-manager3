@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Task : <%= @task.title %></h1>
+
+  <h2>Details</h2>
+
+  <p><%= @task.details %></p>
+
+  <%= link_to "Delete",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+  <%=link_to('Back to home page', tasks_path) %>
+
+  </body>
+</html>
